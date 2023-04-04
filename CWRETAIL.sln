@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Pizzerias", "CWRETAIL.Api.Pizzerias\CWRETAIL.Api.Pizzerias.csproj", "{61D69357-91C9-4633-84E6-BC95F9D18E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Menus", "CWRETAIL.Api.Menus\CWRETAIL.Api.Menus.csproj", "{0744B414-05D3-4B79-933F-7E02097610E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Orders", "CWRETAIL.Api.Orders\CWRETAIL.Api.Orders.csproj", "{3C899508-841C-4833-BB30-C3C093B55740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Menus.Tests", "CWRETAIL.Api.Menus.Tests\CWRETAIL.Api.Menus.Tests.csproj", "{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Orders.Tests", "CWRETAIL.Api.Orders.Tests\CWRETAIL.Api.Orders.Tests.csproj", "{9167FE10-BE32-4875-865D-51D81DA334C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Pizzerias.Test", "CWRETAIL.Api.Pizzerias.Test\CWRETAIL.Api.Pizzerias.Test.csproj", "{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D69357-91C9-4633-84E6-BC95F9D18E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D69357-91C9-4633-84E6-BC95F9D18E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D69357-91C9-4633-84E6-BC95F9D18E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D69357-91C9-4633-84E6-BC95F9D18E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0744B414-05D3-4B79-933F-7E02097610E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0744B414-05D3-4B79-933F-7E02097610E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0744B414-05D3-4B79-933F-7E02097610E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0744B414-05D3-4B79-933F-7E02097610E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C899508-841C-4833-BB30-C3C093B55740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C899508-841C-4833-BB30-C3C093B55740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C899508-841C-4833-BB30-C3C093B55740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C899508-841C-4833-BB30-C3C093B55740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9167FE10-BE32-4875-865D-51D81DA334C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9167FE10-BE32-4875-865D-51D81DA334C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9167FE10-BE32-4875-865D-51D81DA334C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9167FE10-BE32-4875-865D-51D81DA334C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86CA471A-E19C-492D-BC3E-9655C872A8E9}
+	EndGlobalSection
+EndGlobal

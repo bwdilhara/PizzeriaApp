@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.dll
+*.cache
+*.pdb
+/CWRETAIL.Api.Menus/obj
+/CWRETAIL.Api.Menus/bin/Debug/net6.0
+/CWRETAIL.Api.Menus.Tests/bin
+/CWRETAIL.Api.Menus.Tests/obj
+/CWRETAIL.Api.Orders/obj
+/CWRETAIL.Api.Orders.Tests/bin
+/CWRETAIL.Api.Orders.Tests/obj
+/CWRETAIL.Api.Pizzerias/bin/Debug/net6.0
+/CWRETAIL.Api.Orders/bin/Debug/net6.0
+/CWRETAIL.Api.Pizzerias/obj
+/CWRETAIL.Api.Pizzerias.Test/bin
+/CWRETAIL.Api.Pizzerias.Test/obj
+/.vs
