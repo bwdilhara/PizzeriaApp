@@ -1,0 +1,60 @@
+<div class="card">
+  <p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="menu.name"
+              [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+    <ng-template pTemplate="header">
+      <div class="flex flex-column md:flex-row md:justify-content-between">
+        <p-dropdown [options]="locations" optionLabel="name" optionValue="code" (onChange)="onLocationChange($event)"></p-dropdown>
+        <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0"></p-dropdown>
+        <span class="p-input-icon-left mb-2 md:mb-0">
+          <i class="pi pi-search"></i>
+          <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+        </span>
+        <div>
+          <label for="locale-user">Total Amount: </label>
+          <p-inputNumber [(ngModel)]="totalAmount" mode="decimal" locale="en-US" [minFractionDigits]="2" [maxFractionDigits]="2" [disabled]="true" inputId="locale-user"></p-inputNumber>
+        </div>
+        <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+      </div>
+    </ng-template>
+    <ng-template let-product pTemplate="listItem">
+      <div class="p-col-12">
+        <div class="product-list-item">
+          <div class="product-list-detail">
+            <div class="product-name">{{product.name}}</div>
+            <div class="product-description">{{product.description}}</div>
+            <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+            <div [hidden]="!product.category"><i class="pi pi-tag product-category-icon" [hidden]="!product.category"></i><span class="product-category">{{product.category}}</span></div>
+          </div>
+          <div class="product-list-action">
+            <span class="product-price">${{product.price}}</span>
+            <p-button icon="pi pi-shopping-cart" label="Add to Cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+            <span [class]="'product-badge status-' + product.inventoryStatus?.toLowerCase()">{{product.menuStatus}}</span>
+            <p-badge value={{product.quantity}} [hidden]="!product.quantity" styleClass="p-mr-2"></p-badge>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template let-product pTemplate="gridItem">
+      <div class="col-12 md:col-4">
+        <div class="product-grid-item card">
+          <div class="product-grid-item-top">
+            <div [hidden]="!product.category">
+              <i class="pi pi-tag product-category-icon"></i>
+              <span class="product-category">{{product.category}}</span>
+            </div>
+            <span [class]="'product-badge status-' + product.inventoryStatus?.toLowerCase()">{{product.menuStatus}}</span>
+            <p-badge value={{product.quantity}} [hidden]="!product.quantity" styleClass="p-mr-2"></p-badge>
+          </div>
+          <div class="product-grid-item-content">
+            <div class="product-name">{{product.name}}</div>
+            <div class="product-description">{{product.description}}</div>
+            <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+          </div>
+          <div class="product-grid-item-bottom">
+            <span class="product-price">${{product.price}}</span>
+            <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'" (onClick)="onShoppingCartClick(product)"></p-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>

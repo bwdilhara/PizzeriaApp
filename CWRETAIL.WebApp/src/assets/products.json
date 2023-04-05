@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "locationId": 1,
+      "locationName": "Preston",
+      "menuId": 1,
+      "name": "Capricciosa",
+      "description": "Capricciosa – Cheese, Ham, Mushrooms, Olives",
+      "price": 20,
+      "inventoryStatus": ""
+    },
+    {
+      "id": 2,
+      "locationId": 1,
+      "locationName": "Preston",
+      "menuId": 2,
+      "name": "Mexicana",
+      "description": "Mexicana – Cheese, Salami, Capsicum, Chilli",
+
+      "price": 18,
+      "inventoryStatus": "new",
+      "category": "offers"
+    },
+    {
+      "id": 3,
+      "locationId": 1,
+      "locationName": "Preston",
+
+      "menuId": 3,
+      "name": "Margherita",
+      "description": "Margherita – Cheese, Spinach, Ricotta, Cherry Tomatoes",
+
+      "price": 18,
+      "inventoryStatus": "veg"
+    },
+    {
+      "id": 4,
+      "locationId": 1,
+      "locationName": "Preston",
+
+      "menuId": 6,
+      "name": "Toppings",
+      "description": "Toppings – Capsicum",
+
+      "price": 1,
+      "inventoryStatus": "veg"
+    }
+  ]
+}
