@@ -15,8 +15,7 @@ namespace CWRETAIL.Api.Menus.Tests
             var options = new DbContextOptionsBuilder<MenusDbContext>()
                .UseInMemoryDatabase(nameof(GetAllMenus))
                .Options;
-            var dbContext = new MenusDbContext(options);
-            //CreateMenus(dbContext);
+            var dbContext = new MenusDbContext(options);            
 
             var menuProfile = new MenuProfile();
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(menuProfile));
@@ -37,9 +36,7 @@ namespace CWRETAIL.Api.Menus.Tests
             var options = new DbContextOptionsBuilder<MenusDbContext>()
                .UseInMemoryDatabase(nameof(GetMenusForCustomerLocation))
                .Options;
-            var dbContext = new MenusDbContext(options);
-            //CreateMenus(dbContext);
-            //CreateLocationMenus(dbContext);
+            var dbContext = new MenusDbContext(options);          
 
             var menuProfile = new MenuProfile();
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(menuProfile));

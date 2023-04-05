@@ -15,8 +15,22 @@ namespace CWRETAIL.Api.Pizzerias.Controllers
             _pizzeriaService = pizzeriaService;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetPizzaMenusAsync(string locationId)
+        {
+            int id = int.Parse(locationId);
+            if (id > 0) {
+                var result = await _pizzeriaService.GetPizzaMenusAsync(id);
+                if (result.isSuccess)
+                {
+                    return Ok(result.pizzaMenus);
+                }
+            }
+            return NotFound();
+        }
+
         [HttpPost]
-        public async Task<IActionResult> SearchAsync(PizzaOrder pizzaOrder)
+        public async Task<ActionResult<PizzaOrder>> CreatePizzaOrderAsync( PizzaOrder pizzaOrder)
         {
             var result = await _pizzeriaService.CreatePizzaOrderAsync(pizzaOrder);
             if (result.isSuccess)

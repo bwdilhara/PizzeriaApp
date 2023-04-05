@@ -17,12 +17,9 @@ namespace CWRETAIL.Api.Orders.Tests
                .UseInMemoryDatabase(nameof(CreateOrderForOneBlankRecord))
                .Options;
             var dbContext = new OrdersDbContext(options);
-            //CreateOrders(dbContext);
-
+            
             var order = new Models.Order()
-            {
-                //Id = 1,
-               //CustomerId = 1,
+            {               
                 LocationId = 1,
                 OrderDate = DateTime.Now,
                 Items = new List<Models.OrderItem> { new Models.OrderItem {  } }
@@ -48,12 +45,9 @@ namespace CWRETAIL.Api.Orders.Tests
                .UseInMemoryDatabase(nameof(CreateOrderForOnePizza))
                .Options;
             var dbContext = new OrdersDbContext(options);
-            //CreateOrders(dbContext);
-
+         
             var order = new Models.Order()
             {
-                //Id = 1,
-                //CustomerId = 1,
                 LocationId = 1,
                 OrderDate = DateTime.Now,
                 Items = new List<Models.OrderItem> {
@@ -84,12 +78,9 @@ namespace CWRETAIL.Api.Orders.Tests
                .UseInMemoryDatabase(nameof(CreateOrderForMultiplePizza))
                .Options;
             var dbContext = new OrdersDbContext(options);
-            //CreateOrders(dbContext);
-
+            
             var order = new Models.Order()
-            {
-                //Id = 1,
-                //CustomerId = 1,
+            {                
                 LocationId = 1,
                 OrderDate = DateTime.Now,
                 Items = new List<Models.OrderItem> {

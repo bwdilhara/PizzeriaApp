@@ -35,12 +35,12 @@ namespace CWRETAIL.Api.Menus.Providers
                 _dbContext.Menus.Add(new Db.Menu() { MenuId = 7, Name = "Toppings", Description = "Toppings – Salami" });
                 _dbContext.Menus.Add(new Db.Menu() { MenuId = 8, Name = "Toppings", Description = "Toppings – Olives" });
 
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 1, MenuId = 1, Price = 20, LocationId = 1, LocationName = "Preston" });
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 2, MenuId = 2, Price = 18, LocationId = 1, LocationName = "Preston" });
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 3, MenuId = 3, LocationId = 1, LocationName = "Preston", Price = 18 });
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 4, MenuId = 6, LocationId = 1, LocationName = "Preston", Price = 1 });
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 5, MenuId = 1, LocationId = 2, LocationName = "Southbank", Price = 25 });
-                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 6, MenuId = 5, LocationId = 2, LocationName = "Southbank", Price = 17 });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 1, MenuId = 1, LocationId = 1, LocationName = "Preston", Price = 20, Category = "Veg", MenuStatus = "new",Rating="4" });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 2, MenuId = 2, LocationId = 1, LocationName = "Preston", Price = 18, Category = "Gluten-Free", MenuStatus = "new", Rating = "3" });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 3, MenuId = 3, LocationId = 1, LocationName = "Preston", Price = 18, Category = "", MenuStatus = "", Rating = "2" });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 4, MenuId = 6, LocationId = 1, LocationName = "Preston", Price = 1, Category = "Veg", MenuStatus = "offer", Rating = "2" });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 5, MenuId = 1, LocationId = 2, LocationName = "Southbank", Price = 25, Category = "Gluten-Free", MenuStatus = "new", Rating = "4.8" });
+                _dbContext.LocationMenus.Add(new Db.LocationMenu() { Id = 6, MenuId = 5, LocationId = 2, LocationName = "Southbank", Price = 17, Category="", MenuStatus = "Free drink", Rating = "4" });
 
 
                 _dbContext.SaveChanges();
@@ -73,7 +73,7 @@ namespace CWRETAIL.Api.Menus.Providers
             try
             {
                 _logger?.LogInformation($"Querying Menus");
-                var menu = await _dbContext.LocationMenus.Where(i=>i.LocationId == locationId).ToListAsync();
+                var menu = await _dbContext.LocationMenus.Include(l=>l.Menu).Where(i=>i.LocationId == locationId).ToListAsync();
                 if (menu != null)
                 {
                     _logger?.LogInformation("menu found");

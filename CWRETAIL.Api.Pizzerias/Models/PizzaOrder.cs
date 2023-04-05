@@ -6,6 +6,6 @@
         public int LocationId { get; set; }
         public int CustomerId { get; set; }
         public DateTime OrderDate { get; set; }        
-        public List<PizzaOrderItem> Items { get; set; }
+        public List<LocationMenu> Items { get; set; }
     }
 }

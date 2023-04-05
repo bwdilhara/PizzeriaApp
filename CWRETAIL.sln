@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Pizzerias", "CWRETAIL.Api.Pizzerias\CWRETAIL.Api.Pizzerias.csproj", "{61D69357-91C9-4633-84E6-BC95F9D18E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Pizzerias", "CWRETAIL.Api.Pizzerias\CWRETAIL.Api.Pizzerias.csproj", "{61D69357-91C9-4633-84E6-BC95F9D18E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Menus", "CWRETAIL.Api.Menus\CWRETAIL.Api.Menus.csproj", "{0744B414-05D3-4B79-933F-7E02097610E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Menus", "CWRETAIL.Api.Menus\CWRETAIL.Api.Menus.csproj", "{0744B414-05D3-4B79-933F-7E02097610E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Orders", "CWRETAIL.Api.Orders\CWRETAIL.Api.Orders.csproj", "{3C899508-841C-4833-BB30-C3C093B55740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Orders", "CWRETAIL.Api.Orders\CWRETAIL.Api.Orders.csproj", "{3C899508-841C-4833-BB30-C3C093B55740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Menus.Tests", "CWRETAIL.Api.Menus.Tests\CWRETAIL.Api.Menus.Tests.csproj", "{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Menus.Tests", "CWRETAIL.Api.Menus.Tests\CWRETAIL.Api.Menus.Tests.csproj", "{02C9E069-6BA6-404D-8AB9-3E6A93AF8711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Orders.Tests", "CWRETAIL.Api.Orders.Tests\CWRETAIL.Api.Orders.Tests.csproj", "{9167FE10-BE32-4875-865D-51D81DA334C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Orders.Tests", "CWRETAIL.Api.Orders.Tests\CWRETAIL.Api.Orders.Tests.csproj", "{9167FE10-BE32-4875-865D-51D81DA334C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWRETAIL.Api.Pizzerias.Test", "CWRETAIL.Api.Pizzerias.Test\CWRETAIL.Api.Pizzerias.Test.csproj", "{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CWRETAIL.Api.Pizzerias.Test", "CWRETAIL.Api.Pizzerias.Test\CWRETAIL.Api.Pizzerias.Test.csproj", "{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "CWRETAIL.WebApp", "CWRETAIL.WebApp\CWRETAIL.WebApp.esproj", "{C97F454C-9482-4120-89D5-3DCAA1B932AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,12 @@ Global
 		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A64B70-BC17-4D2F-8A27-5C4A27AF65DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97F454C-9482-4120-89D5-3DCAA1B932AE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

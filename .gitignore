@@ -18,3 +18,5 @@
 /CWRETAIL.Api.Pizzerias.Test/bin
 /CWRETAIL.Api.Pizzerias.Test/obj
 /.vs
+/CWRETAIL.WebApp/obj/Debug
+/CWRETAIL.WebApp/.vscode

@@ -29,7 +29,7 @@ namespace CWRETAIL.Api.Pizzerias.Services
                 {
                     foreach (var item in pizzaOrder.Items)
                     {
-                        var menu = menuResults.menus?.FirstOrDefault(i => i.Id == item.locationMenuId);
+                        var menu = menuResults.menus?.FirstOrDefault(i => i.Id == item.Id);
                         if (menu != null)
                         {
                             order.Items.Add(new OrderItem
@@ -45,5 +45,35 @@ namespace CWRETAIL.Api.Pizzerias.Services
             }
             return (true, totalAmount);
         }
+
+        public async Task<(bool isSuccess, IEnumerable<LocationMenu> pizzaMenus)> GetPizzaMenusAsync(int locationId)
+        {
+            List<LocationMenu> result = new List<LocationMenu>();
+            if (locationId > 0)
+            {
+                var menuResults = await _menusService.GetMenuAsync(locationId);
+
+                if (menuResults.isSuccess)
+                {
+                    foreach (var item in menuResults.menus)
+                    {
+                        result.Add(new LocationMenu
+                        {
+                            Id = item.Id,
+                            Name = item.Name,
+                            Description = item.Description,
+                            MenuId = item.MenuId,
+                            MenuStatus = item.MenuStatus!=null?item.MenuStatus:"",
+                            Category = item.Category != null ? item.Category : "",
+                            Price = item.Price,
+                            LocationId = item.LocationId,
+                            Rating= item.Rating, 
+                        });
+                    }
+                }
+            }
+            return (true, result);
+        }     
+
     }
 }
